@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&display=swap");
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Clarkson";
+  src: url("/fonts/Clarkson-Light.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --color-canvas: #F6F6F6;
+  --color-surface: #FFFFFF;
+  --color-primary: #191919;
+  --color-secondary: #666666;
+  --color-orange: #F75708;
+  --color-blue: #3898EC;
+  --color-green: #BEE0C0;
+  --color-red: #D94B4D;
+  --color-border: #E4E4E4;
+  --color-orange-light: #FFF0E8;
+  --color-green-light: #F0F7F1;
+  --color-blue-light: #EBF5FC;
+
+  --font-sans: "Instrument Sans", system-ui, sans-serif;
+  --font-heading: "Clarkson", Helvetica, sans-serif;
+
+  --text-display: clamp(3.5rem, 8vw, 7.5rem);
+  --text-h1: clamp(3rem, 6.5vw, 6rem);
+  --text-h2: clamp(2.4rem, 4.8vw, 4.5rem);
+  --text-h3: clamp(1.75rem, 3vw, 2.5rem);
+  --text-h4: clamp(1.35rem, 2vw, 1.75rem);
+  --text-body-lg: clamp(1.1rem, 1.4vw, 1.25rem);
+  --text-body: 1rem;
+  --text-small: 0.875rem;
+  --text-xs: 0.75rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  background-color: var(--color-canvas);
+  color: var(--color-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+}
+
+::selection {
+  background-color: var(--color-orange);
+  color: white;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
